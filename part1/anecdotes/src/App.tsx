@@ -19,7 +19,7 @@ export default function App(): JSX.Element {
   const [points, setPoints] = useState(Array(anecdotes.length).fill(0));
 
   const newAnecdote = (): void => {
-    setSelected(Math.floor(Math.random() * (anecdotes.length - 1)));
+    setSelected(Math.floor(Math.random() * anecdotes.length));
   };
 
   const voteAnecdote = (): void => {
