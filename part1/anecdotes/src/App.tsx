@@ -23,9 +23,9 @@ export default function App(): JSX.Element {
   };
 
   const voteAnecdote = (): void => {
-    const copy = [...points];
-    copy[selected] += 1;
-    setPoints(copy);
+    const newPoints = [...points];
+    newPoints[selected] += 1;
+    setPoints(newPoints);
   };
 
   return (
