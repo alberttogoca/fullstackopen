@@ -1,6 +1,6 @@
-# Course information
+# Course contents
 
-Simple web applicaton for understanding the core concepts of React
+Simple web app for getting used to collections & modules
 
 ## Start the application
 
