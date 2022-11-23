@@ -1,0 +1,8 @@
+node_modules
+yarn.lock
+.DS_Store
+dist
+dist-ssr
+build
+*.local
+node_modules/*
