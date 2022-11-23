@@ -1,6 +1,6 @@
 import { ChangeEvent, SyntheticEvent, useState } from 'react';
+
 import Filter from './components/Filter';
-import Person from './components/Person';
 import PersonForm from './components/PersonForm';
 import Persons from './components/Persons';
 
@@ -19,7 +19,7 @@ export default function App(): JSX.Element {
   const personsToShow =
     filter === '' ? persons : persons.filter((person) => person.name.toLowerCase().startsWith(filter.toLowerCase()));
 
-  const addPerson = (event: SyntheticEvent) => {
+  const addPerson = (event: SyntheticEvent): void => {
     event.preventDefault();
     const personFinded = persons.find((person) => person.name === newName);
     if (personFinded) {
@@ -32,19 +32,19 @@ export default function App(): JSX.Element {
     }
   };
 
-  const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleNameChange = (event: ChangeEvent<HTMLInputElement>): void => {
     event.preventDefault();
     const target = event.target as HTMLInputElement;
     setNewName(target.value);
   };
 
-  const handleTelChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleTelChange = (event: ChangeEvent<HTMLInputElement>): void => {
     event.preventDefault();
     const target = event.target as HTMLInputElement;
     setNewTel(target.value);
   };
 
-  const handleFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleFilterChange = (event: ChangeEvent<HTMLInputElement>): void => {
     event.preventDefault();
     const target = event.target as HTMLInputElement;
     setFilter(target.value);
